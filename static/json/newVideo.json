@@ -1,0 +1,41 @@
+{
+  "videoSlide":[
+    {
+      "method": "http://www.aisoubai.com/",
+      "src": "/static/images/loginIcon.png",
+      "title": "222222",
+      "label": "222",
+      "number": "222"
+    }, {
+      "method": "http://www.aisoubai.com/",
+      "src": "/static/images/loginIcon.png",
+      "title": "这是标题",
+      "label": "xinshou",
+      "number": "666"
+    }, {
+      "method": "http://www.aisoubai.com/",
+      "src": "/static/images/loginIcon.png",
+      "title": "这是标题333",
+      "label": "333",
+      "number": "333"
+    }, {
+      "method": "http://www.aisoubai.com/",
+      "src": "/static/images/loginIcon.png",
+      "title": "这是标题444",
+      "label": "444",
+      "number": "444"
+    }, {
+      "method": "http://www.aisoubai.com/",
+      "src": "/static/images/loginIcon.png",
+      "title": "这是标题5",
+      "label": "55",
+      "number": "55"
+    }, {
+      "method": "http://www.aisoubai.com/",
+      "src": "/static/images/loginIcon.png",
+      "title": "这是标题",
+      "label": "xinshou",
+      "number": "666"
+    }
+  ]
+}

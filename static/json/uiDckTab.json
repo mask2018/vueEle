@@ -1,0 +1,72 @@
+{
+  "category": [
+    {
+      "name": "品牌",
+      "items": [
+        {
+          "name": "联想",
+          "active": false
+        },
+        {
+          "name": "小米",
+          "active": false
+        },
+        {
+          "name": "苹果",
+          "active": false
+        },
+        {
+          "name": "东芝",
+          "active": false
+        }
+      ]
+    },
+    {
+      "name": "CPU",
+      "items": [
+        {
+          "name": "intel i7 8700K",
+          "active": false
+        },
+        {
+          "name": "intel i7 7700K",
+          "active": false
+        },
+        {
+          "name": "intel i9 9270K",
+          "active": false
+        },
+        {
+          "name": "intel i7 8700",
+          "active": false
+        },
+        {
+          "name": "AMD 1600X",
+          "active": false
+        }
+      ]
+    },
+    {
+      "name": "内存",
+      "items": [
+        {
+          "name": "七彩虹8G",
+          "active": false
+        },
+        {
+          "name": "七彩虹16G",
+          "active": false
+        },
+        {
+          "name": "金士顿8G",
+          "active": false
+        },
+        {
+          "name": "金士顿16G",
+          "active": false
+        }
+      ]
+    }
+  ],
+  "condition": []
+}
