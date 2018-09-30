@@ -1,21 +1,23 @@
 <template>
   <div class="Uidck">
-    <div class='nav' v-for='(items,index) in category'>
-      <div class='mutil-query-title' v-if='items.name' :key="items.id">
-        {{items.name}}
-        <span style='margin-left: 20px;' @click='allIn(index)'>全选</span>
+    <div class='nav' v-for='(data, index) in category' :key="data.id">
+      <div>
+        {{data.name}}
       </div>
-      <ol v-if='items.items.length'>
-        <li v-for='(item,key) in items.items'>
-          <span :class="{'active':item.active}" @click='handle(index,key)' :key='item.id'>{{item.name}}</span>
+      <ul>
+        <li v-for='(data1, key) in data.items'>
+          <span :class="{'active':data1.active}" :key='data1.id'>{{data1.name}}</span>
         </li>
-      </ol>
+      </ul>
     </div>
     <div class="uiDckList">
       <ul>
         <li v-for="data in uiDckListLi">
           <div class="uiDckListAll">
-            <a :href="data.method" class="uiDckListImg"><img v-bind:src="data.src"/></a>
+            <a :href="data.method" class="uiDckListImg">
+              <img v-bind:src="data.src"/>
+              <span>{{data.time}}</span>
+            </a>
             <a :href="data.method" class="uiDckListTitle">{{data.title}}</a>
             <p class="uiDckListDetail">
               <span class="fl">初学者</span>
@@ -37,15 +39,14 @@ export default {
       uiDckListLi: [],
       page: 1,
       category: [],
-      count: 0
+      sel: []
     }
   },
   created () {
     axios.get('/static/json/uiDckTab.json')
       .then(function (response) {
-        console.log(response.data)
         var _this = this
-        _this.items.items = response.data.category
+        _this.category = response.data.category
       }).catch(function (error) {
         console.log(error)
       })
@@ -53,18 +54,10 @@ export default {
   components: {
   },
   methods: {
-    handle: function (index, key) {
-      var item = this.category[index].items
-      item.filter(function (v, i) {
-        if (i === key) {
-          v.active = true
-          this.list.condition.filter(function (v2, i) {
-            if (v.name === v2.name) {
-              this.list.condition.splice(i, 1)
-            }
-          })
-        }
-      })
+    select: function (index, i, j) {
+      var _this = this
+      _this.sel[i] = j
+      _this.$set(_this.sel, i, j)
     },
     getPage (page) {
       var _this = this
@@ -83,6 +76,7 @@ export default {
   },
   mounted () {
     this.getPage(this.page)
+    this.select(this.index, this.ind)
   }
 }
 </script>
@@ -105,8 +99,11 @@ export default {
         background-color: #ddd; border-radius: 6px;
         .uiDckListAll{
           .uiDckListImg{
-            display: block; width: 100%; height: 150px;
+            position: relative; display: block; width: 100%; height: 150px;
             img{ width: 100%; height: 100%; border-radius: 6px 6px 0 0;}
+            span{
+              position: absolute; right: 10px; bottom: 10px; padding: 3px 10px; background-color: rgba(0,0,0,.5); color: #fff; border-radius: 6px;
+            }
           }
           .uiDckListTitle{
             display: block; width: 90%; margin: 16px auto 0;
@@ -116,6 +113,9 @@ export default {
             width: 90%; margin: 0 auto; padding: 16px 0; overflow: hidden;
           }
         }
+      }
+      li:nth-of-type(6n){
+        margin-right: 0;
       }
     }
   }
