@@ -1,68 +1,335 @@
 {
   "category": [
     {
-      "name": "品牌",
+      "name": "排序",
       "items": [
         {
-          "name": "联想",
-          "active": false
+          "name": "最新教程",
+          "active": true
         },
         {
-          "name": "小米",
-          "active": false
-        },
-        {
-          "name": "苹果",
-          "active": false
-        },
-        {
-          "name": "东芝",
+          "name": "最多学习",
           "active": false
         }
       ]
     },
     {
-      "name": "CPU",
+      "name": "分类",
       "items": [
         {
-          "name": "intel i7 8700K",
+          "name": "字体设计",
+          "active": true
+        },
+        {
+          "name": "海报设计",
           "active": false
         },
         {
-          "name": "intel i7 7700K",
+          "name": "软件入门",
           "active": false
         },
         {
-          "name": "intel i9 9270K",
+          "name": "综合教程",
           "active": false
         },
         {
-          "name": "intel i7 8700",
+          "name": "C4D教程",
           "active": false
         },
         {
-          "name": "AMD 1600X",
+          "name": "图像合成",
+          "active": false
+        },
+        {
+          "name": "产品精修",
+          "active": false
+        },
+        {
+          "name": "摄影艺术",
+          "active": false
+        },
+        {
+          "name": "影视动画",
+          "active": false
+        },
+        {
+          "name": "职业发展",
+          "active": false
+        },
+        {
+          "name": "人像精修",
+          "active": false
+        },
+        {
+          "name": "绘画插画",
+          "active": false
+        },
+        {
+          "name": "店铺装修",
+          "active": false
+        },
+        {
+          "name": "室内设计",
+          "active": false
+        },
+        {
+          "name": "系列课",
+          "active": false
+        },
+        {
+          "name": "视频评改",
+          "active": false
+        },
+        {
+          "name": "海外教程",
+          "active": false
+        },
+        {
+          "name": "品牌设计",
+          "active": false
+        },
+        {
+          "name": "UI设计",
           "active": false
         }
       ]
     },
     {
-      "name": "内存",
+      "name": "场景",
       "items": [
         {
-          "name": "七彩虹8G",
+          "name": "全部",
+          "active": true
+        },
+        {
+          "name": "电商促销",
           "active": false
         },
         {
-          "name": "七彩虹16G",
+          "name": "节日气节",
           "active": false
         },
         {
-          "name": "金士顿8G",
+          "name": "字母数字",
           "active": false
         },
         {
-          "name": "金士顿16G",
+          "name": "文化创意",
+          "active": false
+        },
+        {
+          "name": "教师节",
+          "active": false
+        },
+        {
+          "name": "招聘",
+          "active": false
+        },
+        {
+          "name": "影视游戏",
+          "active": false
+        },
+        {
+          "name": "样机",
+          "active": false
+        },
+        {
+          "name": "新年",
+          "active": false
+        },
+        {
+          "name": "校园青春",
+          "active": false
+        },
+        {
+          "name": "周杰伦",
+          "active": false
+        },
+        {
+          "name": "GIF字效",
+          "active": false
+        },
+        {
+          "name": "情人节",
+          "active": false
+        },
+        {
+          "name": "夏天",
+          "active": false
+        },
+        {
+          "name": "开学季",
+          "active": false
+        },
+        {
+          "name": "周年",
+          "active": false
+        },
+        {
+          "name": "婚庆",
+          "active": false
+        },
+        {
+          "name": "促销",
+          "active": false
+        },
+        {
+          "name": "双11",
+          "active": false
+        },
+        {
+          "name": "国庆",
+          "active": false
+        },
+        {
+          "name": "中秋节",
+          "active": false
+        },
+        {
+          "name": "其他",
+          "active": false
+        }
+      ]
+    },
+    {
+      "name": "风格",
+      "items": [
+        {
+          "name": "全部",
+          "active": true
+        },
+        {
+          "name": "中国风",
+          "active": false
+        },
+        {
+          "name": "酷炫",
+          "active": false
+        },
+        {
+          "name": "手绘",
+          "active": false
+        },
+        {
+          "name": "矢量",
+          "active": false
+        },
+        {
+          "name": "黑白",
+          "active": false
+        },
+        {
+          "name": "炫彩",
+          "active": false
+        },
+        {
+          "name": "清新",
+          "active": false
+        },
+        {
+          "name": "可爱卡通",
+          "active": false
+        },
+        {
+          "name": "拟物",
+          "active": false
+        },
+        {
+          "name": "复古",
+          "active": false
+        },
+        {
+          "name": "其他",
+          "active": false
+        }
+      ]
+    },
+    {
+      "name": "内容",
+      "items": [
+        {
+          "name": "全部",
+          "active": true
+        },
+        {
+          "name": "毛笔字",
+          "active": false
+        },
+        {
+          "name": "立体字",
+          "active": false
+        },
+        {
+          "name": "金属字",
+          "active": false
+        },
+        {
+          "name": "金色字",
+          "active": false
+        },
+        {
+          "name": "粉笔字",
+          "active": false
+        },
+        {
+          "name": "灯光字",
+          "active": false
+        },
+        {
+          "name": "火焰字",
+          "active": false
+        },
+        {
+          "name": "折纸字",
+          "active": false
+        },
+        {
+          "name": "星辰字",
+          "active": false
+        },
+        {
+          "name": "草地字",
+          "active": false
+        },
+        {
+          "name": "烟雾字",
+          "active": false
+        },
+        {
+          "name": "图形字",
+          "active": false
+        },
+        {
+          "name": "其他",
+          "active": false
+        }
+      ]
+    },
+    {
+      "name": "软件",
+      "items": [
+        {
+          "name": "全部",
+          "active": true
+        },
+        {
+          "name": "PS",
+          "active": false
+        },
+        {
+          "name": "AI",
+          "active": false
+        },
+        {
+          "name": "CDR",
+          "active": false
+        },
+        {
+          "name": "C4D",
+          "active": false
+        },
+        {
+          "name": "AE",
           "active": false
         }
       ]

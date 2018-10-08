@@ -1,14 +1,16 @@
 <template>
   <div class="Uidck">
-    <div class='nav' v-for='(data, index) in category' :key="data.id">
-      <div>
-        {{data.name}}
+    <div class="nav">
+      <div class="navCen" v-for='(data, index) in category' :key="data.id">
+        <span class="navTitle">
+          {{data.name}}
+        </span>
+        <ul class="navList">
+          <li v-for="(data1, key) in data.items" @click="navLab(index, key)"  :class="{'on':data1.active}" :key='data1.id'>
+            {{data1.name}}
+          </li>
+        </ul>
       </div>
-      <ul>
-        <li v-for='(data1, key) in data.items'>
-          <span :class="{'active':data1.active}" :key='data1.id'>{{data1.name}}</span>
-        </li>
-      </ul>
     </div>
     <div class="uiDckList">
       <ul>
@@ -43,9 +45,9 @@ export default {
     }
   },
   created () {
+    var _this = this
     axios.get('/static/json/uiDckTab.json')
       .then(function (response) {
-        var _this = this
         _this.category = response.data.category
       }).catch(function (error) {
         console.log(error)
@@ -54,6 +56,16 @@ export default {
   components: {
   },
   methods: {
+    navLab: function (index, key) {
+      var item = this.category[index].items
+      item.filter(function (v, i) {
+        if (i === key) {
+          v.active = true
+        } else {
+          v.active = false
+        }
+      })
+    },
     select: function (index, i, j) {
       var _this = this
       _this.sel[i] = j
@@ -87,8 +99,37 @@ export default {
   margin-right: 30px;
   padding: 30px 0;
   .nav{
-    padding: 60px 0;
+    margin-bottom: 20px;
+    padding-top: 20px;
     background-color: burlywood;
+    .navCen{
+      position: relative;
+      padding-bottom: 20px;
+      .navTitle{
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        width: 100px;
+        padding: 3px 0;
+        text-align: center;
+        border: 1px solid burlywood;
+      }
+      .navList{
+        margin-left: 100px;
+        overflow: hidden;
+        li{
+          float: left;
+          padding: 3px 10px;
+          border: 1px solid burlywood;
+          border-radius: 30px;
+          cursor: pointer;
+        }
+        li.on{
+          border: 1px solid #fff;
+        }
+      }
+    }
   }
   .uiDckList{
     ul{
