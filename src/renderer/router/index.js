@@ -5,6 +5,7 @@ import Register from '@/components/login/Register'
 import PhoneLogin from '@/components/login/PhoneLogin'
 import PhoneRegister from '@/components/login/PhoneRegister'
 import Center from '@/components/Center'
+import Head from '@/components/Head'
 import Index from '@/components/Index'
 import RecVideo from '@/components/index/RecVideo'
 import ChoiceVideo from '@/components/index/ChoiceVideo'
@@ -48,6 +49,11 @@ export default new Router({
       path: '/components/Center',
       name: 'Center',
       component: Center
+    },
+    {
+      path: '/components/Head',
+      name: 'Head',
+      component: Head
     },
     {
       path: '/components/Index',

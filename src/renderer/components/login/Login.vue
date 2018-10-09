@@ -63,6 +63,9 @@ export default {
       curView: 'PhoneLogin'
     }
   },
+  created: function () {
+    this.$emit('comHead', false)
+  },
   components: {
     PhoneLogin,
     PhoneRegister

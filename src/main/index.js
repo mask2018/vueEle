@@ -22,7 +22,9 @@ function createWindow () {
   mainWindow = new BrowserWindow({
     height: 563,
     useContentSize: true,
-    width: 1000
+    width: 1000,
+    webPreferences: {webSecurity: false},
+    frame: false
   })
 
   mainWindow.loadURL(winURL)
@@ -39,7 +41,18 @@ app.on('window-all-closed', () => {
     app.quit()
   }
 })
-
+// 小化
+app.on('hide-window', () => {
+  mainWindow.minimize()
+})
+// 最大化
+app.on('show-window', () => {
+  mainWindow.maximize()
+})
+// 还原
+app.on('orignal-window', () => {
+  mainWindow.unmaximize()
+})
 app.on('activate', () => {
   if (mainWindow === null) {
     createWindow()
